@@ -1,7 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"templategolang-gingonic/internal/config"
+
+	"github.com/gin-gonic/gin"
+	_ "github.com/lib/pq"
+)
 
 func main() {
-	fmt.Println("work")
+
+	//* OBTENGO LAS LAS VARIABLES DE ENTORNO
+	cnf := config.NewConfig()
+	fmt.Println(cnf)
+
+	// Inicializar el router de Gin
+	routes := gin.Default()
+
+	routes.GET("/", nil)
+
 }

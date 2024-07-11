@@ -11,7 +11,10 @@
             "mode": "auto",
             "program": "${workspaceFolder}/cmd",
             "env": {
-                
+                //connStr := "host=localhost port=5432 user=postgres password=micontraseña dbname=minuevadb sslmode=disable"
+                "URI_REDIS":"redis://127.0.0.1:6379/1",
+                "URI_MONGO":"mongodb://localhost:27017/",
+                "URI_POSTGRESQL":"postgresql://postgres:thecata@localhost:5432/dbtest?sslmode=disable",
             }
         }
     ]
